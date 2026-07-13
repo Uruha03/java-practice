@@ -6,7 +6,7 @@ public class Question04_06 {
             { 40, 50 },
             { 70, 80 },
         };
-        for ( int i = 0; i <= 2; i++ ){
+        for ( int i = 0; i < array.length; i++ ){
             System.out.println("1-4. " + ( i + 1 ) + "つめの計算結果は、" + ( array[i][0] + array[i][1]) );
         }
         for ( int[] row : array ){
