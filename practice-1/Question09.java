@@ -1,7 +1,7 @@
 public class Question09 {
     public static void main(String[] args) {
-        int a = 31;
-        boolean[] prime = new boolean[a];
+        int a = 30;
+        boolean[] prime = new boolean[a + 1];
 
         // 全てtrueにしておく
         // 0と1は素数ではないので、最初からfalseで省いておく
@@ -19,7 +19,9 @@ public class Question09 {
         }
         // 表示
         for ( int x = 1; x < prime.length; x++ ){
-            System.out.println(x + ":" + prime[x] );
+            if ( prime[x] == true ){
+                System.out.println( x );
+            }
         }
     }
 }
