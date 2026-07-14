@@ -1,6 +1,5 @@
 package practice03;
 
-import java.io.IOException;
 import java.util.Scanner;
 
 public class Question02 {
@@ -17,13 +16,7 @@ public class Question02 {
             // メソッドでtrhowsしたエラー型と同じcatchがないとエラーが出る
             String result = coffee(choice);
             System.out.println(result + "のコーヒーを淹れました！");
-        } catch (NullPointerException e) {
-            System.out.println("例外が発生しました");
-            System.out.println(e);
         } catch (IndexOutOfBoundsException e) {
-            System.out.println("例外が発生しました");
-            System.out.println(e);
-        } catch (IOException e) {
             System.out.println("例外が発生しました");
             System.out.println(e);
         }
@@ -31,7 +24,7 @@ public class Question02 {
 
     // 任意のメソッドを作成
     // IOException意外にも、発生すると思われるエラー型は選択できる
-    public static String coffee(int type) throws IOException {
+    public static String coffee(int type) throws IndexOutOfBoundsException {
         // 配列
         String[] area = { "ブラジル産", "コロンビア産", "グアテマラ産", "オリジナルブレンド", " "};
         return area[type - 1];
