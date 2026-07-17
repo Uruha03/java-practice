@@ -9,9 +9,8 @@ public class Player {
 
     // 自身の手持ちのCardを出力するprintメソッド
     public void print(){
-        for ( Card printCard : handCard ){
-            System.out.println(printCard);
-        }
+        // toStringしているので、コレクションそのまま渡せる
+        System.out.println(handCard);
         System.out.println("手札カードをすべて見せました");
     }
     // 手持ちのCardをTrumpに返却するrepaymentメソッド
