@@ -17,16 +17,19 @@ public class Trump {
                 deck.add(new CardNumber(mark, num));
             }
         }
-        deck.add(new CardJoker("", "Joker"));
-        deck.add(new CardJoker("", "Joker"));
+        // 同じ処理はforで書く
+        for( int i = 0; i < 2; i++ ) {
+            deck.add(new CardJoker("", "Joker"));
+        }
     }
 
     // 保持しているCardを混ぜるshuffleメソッド
-    public ArrayList<Card> shuffle() {
+    // Mainクラスでインスタンスを生成していて、シャッフル後のdeckフィールドに直接アクセスできる
+    // shuffle()内で新しいArrayListを作って返す場合は、新しいArrayListをメソッドの外でも使えるようにreturnが必要
+    public void shuffle() {
         // リストにランダム格納することでシャッフルとする
         Collections.shuffle(deck);
         System.out.println("カードをシャッフルしました");
-        return deck;
     }
 
     // 引数の各Playerに1枚ずつ全てのCardを配るdistributeメソッド
@@ -61,9 +64,7 @@ public class Trump {
 
     // 保持しているカードを出力するprintメソッド
     public void print() {
-        for ( Card printCard : deck ){
-            System.out.println(printCard);
-        }
+        System.out.println(deck);
         System.out.println("山札のカードをすべて見せました");
     }
 }
