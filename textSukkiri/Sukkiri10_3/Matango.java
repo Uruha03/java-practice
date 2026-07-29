@@ -12,9 +12,10 @@ public class Matango {
 		this.suffix = suffix;
 	}
 	
-	public void attack(Hero h) {
+	public int attack(Hero h) {
+		int damage = 10;
 		System.out.println("きのこ" + this.suffix + "の攻撃");
-		System.out.println("10ダメージ");
-		h.hp -= 10;
+		System.out.println(damage + "ダメージ");
+		return damage;
 	}
 }
