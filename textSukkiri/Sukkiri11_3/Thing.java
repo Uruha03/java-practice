@@ -6,5 +6,5 @@ public interface Thing {
 
     // メソッドは暗黙的にpublic abstractになる
     public double getWeight();
-    public double setWeight();
+    public double setWeight(double weight);
 }
