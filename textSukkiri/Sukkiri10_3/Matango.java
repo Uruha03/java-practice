@@ -4,9 +4,6 @@ public class Matango {
 	int hp = 50;
 	char suffix;
 
-	// デフォルトコンストラクタ
-	public Matango() { }
-
 	public Matango(char suffix) {
 		this.suffix = suffix;
 	}
