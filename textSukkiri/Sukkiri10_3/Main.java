@@ -10,11 +10,17 @@ public class Main {
         h.name = "みなと";
         h.hp = 100;
         // 敵の攻撃
-        h.damage(pm.attack(h));
-        h.damage(pm.attack(h));
-        h.damage(pm.attack(h));
-        h.damage(pm.attack(h));
-        h.damage(pm.attack(h));
-        h.damage(pm.attack(h));
+        pm.attack(h);
+        System.out.println(h.name + "の体力 " + h.hp);
+        pm.attack(h);
+        System.out.println(h.name + "の体力 " + h.hp);
+        pm.attack(h);
+        System.out.println(h.name + "の体力 " + h.hp);
+        pm.attack(h);
+	    System.out.println(h.name + "の体力 " + h.hp);
+        pm.attack(h);
+	    System.out.println(h.name + "の体力 " + h.hp);
+        pm.attack(h);
+	    System.out.println(h.name + "の体力 " + h.hp);
     }
 }

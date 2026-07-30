@@ -5,14 +5,14 @@ public class PoisonMatango extends Matango {
 
     // 「お化け毒キノコ A」のAがsuffixになる
 	public PoisonMatango(char suffix) {
-		this.suffix = suffix;
+		super();
 	}
 
     // オーバーライドするためには、メソッド名と引数が一致していてfinalやstaticメソッドではない必要がある
     @Override
-	public int attack(Hero h){
+	public void attack(Hero h){
+		super.attack(h);
         int hp = h.hp;
-		int damage = super.attack(h);
 		int poisonDamage = 0;
     	if( 0 < poison ){
             poisonDamage = Math.ceilDiv(hp, 5);
@@ -21,9 +21,8 @@ public class PoisonMatango extends Matango {
             // 「(int)(Math.ceil(h.hp/5))」は(h.hp/5)がint型で結果を出すため、Math.ceilの意味がない
             // 「Math.ceilDiv(h.hp, 5)」は、int型の引数を2つ受け取り、第一引数を第二引数で割った値を切り上げてint型で返す
 		    System.out.println(poisonDamage + "ポイントのダメージ！");
-	        poison = --poison;
+	        poison--;
+			h.hp -= poisonDamage;
         }
-		return damage + poisonDamage;
 	}
-
 }
