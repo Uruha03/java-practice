@@ -1,9 +1,9 @@
 package textSukkiri.Sukkiri11_1;
 
 public class TangibleAsset {
-	String name;
-	int price;
-	String color;
+	private String name;
+	private int price;
+	private String color;
 
 	//コンストラクタ
     // スーパーコンストラクタがないとサブクラスでエラーが出る（Implicit super constructor is undefined.）
@@ -13,7 +13,7 @@ public class TangibleAsset {
 		this.color = color;
     }
 
-	//メソッド
+	//ゲッタ
 	public String getName() { return this.name; }
 	public int getPrice() { return this.price; }
 	public String getColor() { return this.color; }

@@ -1,7 +1,7 @@
 package textSukkiri.Sukkiri11_1;
 
 public class Book extends TangibleAsset {
-	String isbn;
+	private String isbn;
 
 	//コンストラクタ
 	public Book(String name, int price, String color, String isbn) {
@@ -9,15 +9,7 @@ public class Book extends TangibleAsset {
 		this.isbn = isbn;
 	}
 
-	//メソッド
-    public String getName(){
-        return super.getName();
-    }
-    public int getPrice(){
-        return super.getPrice();
-    }
-    public String getColor(){
-        return super.getColor();
-    }
+	//ゲッタ
+    // 親クラスで定義したゲッタは、振る舞いが変わらなければオーバーライド不要
 	public String getIsbn() { return this.isbn; }
 }

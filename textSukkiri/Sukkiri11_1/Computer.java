@@ -1,7 +1,7 @@
 package textSukkiri.Sukkiri11_1;
 
 public class Computer extends TangibleAsset { 
-	String makerName;
+	private String makerName;
 	
 	//コンストラクタ
 	public Computer(String name, int price, String color, String makerName) {
@@ -9,15 +9,7 @@ public class Computer extends TangibleAsset {
 		this.makerName = makerName;
 	}
 
-	//メソッド
-    public String getName(){
-        return super.getName();
-    }
-    public int getPrice(){
-        return super.getPrice();
-    }
-    public String getColor(){
-        return super.getColor();
-    }
+	//ゲッタ
+    // 親クラスで定義したゲッタは、振る舞いが変わらなければオーバーライド不要
 	public String getmakerName() { return this.makerName; }
 }
