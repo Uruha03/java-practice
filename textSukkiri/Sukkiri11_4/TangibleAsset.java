@@ -1,7 +1,7 @@
 package textSukkiri.Sukkiri11_4;
 
-// TangibleAssetは、Assetsを継承していてかつThingインタフェースを実装している
-public class TangibleAsset extends Assets implements Thing{
+// TangibleAssetは、Assetを継承していてかつThingインタフェースを実装している
+public class TangibleAsset extends Asset implements Thing{
 	private int price;
 	private String color;
 	double weight;
