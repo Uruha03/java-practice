@@ -11,7 +11,7 @@ public class Wand {
 	public void setName(String name) throws IllegalArgumentException {
 		// ①杖の名前は必ず３文字以上を指定する必要がある
 		if(name.length() < 3){
-			System.out.println(new IllegalArgumentException());
+	   		throw new IllegalArgumentException("杖の名前は必ず３文字以上を指定してください");
 		}
 		this.name = name;
 	}
@@ -21,7 +21,7 @@ public class Wand {
 		double low = 0.5;
 		double high = 100;
 		if(power < low|| power > high){
-			System.out.println(new IllegalArgumentException());
+	   		throw new IllegalArgumentException("杖による増幅率は、0.5以上100以下にしてください");
 		}
 		this.power = power;
 	}
