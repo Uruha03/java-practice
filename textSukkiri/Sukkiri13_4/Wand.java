@@ -8,6 +8,21 @@ public class Wand {
 	public String getName() { return name; }
 	public double getPower() { return power; }
 	// セッタ
-	public void setName(String name) { this.name = name; }
-	public void setPower(double power) { this.power = power; }
+	public void setName(String name) throws IllegalArgumentException {
+		// ①杖の名前は必ず３文字以上を指定する必要がある
+		if(name.length() < 3){
+			System.out.println(new IllegalArgumentException());
+		}
+		this.name = name;
+	}
+
+	public void setPower(double power) throws IllegalArgumentException {
+		// ②杖による増幅率は、0.5以上100以下にする
+		double low = 0.5;
+		double high = 100;
+		if(power < low|| power > high){
+			System.out.println(new IllegalArgumentException());
+		}
+		this.power = power;
+	}
 }
