@@ -6,7 +6,7 @@ public class Wizard {
 	private String name;
 	private Wand wand;
 
-	void heal(Hero h) {
+	public void heal(Hero h) {
 		int basePoint = 10; //基本回復ポイント
 		int recovPoint = (int)(basePoint * wand.getPower()); //杖による増幅
 		h.setHp(h.getHp() + recovPoint);
